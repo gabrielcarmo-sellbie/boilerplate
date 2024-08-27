@@ -1,0 +1,29 @@
+@apiurl=http://localhost:3000
+@user_email=gabriel.carmo@sellbie.com.br
+@user_password=C@rmo167
+@user_name=Gabriel Carmo
+@jwt_token={{loginRequest.response.body.access_token}}
+
+### /user
+POST {{apiurl}}/user
+Content-Type: application/json
+
+{
+  "name": "{{user_name}}",
+  "email": "{{user_email}}",
+  "password": "{{user_password}}"
+}
+
+### /login
+# @name loginRequest
+POST {{apiurl}}/login
+Content-Type: application/json
+
+{
+  "email": "{{user_email}}",
+  "password": "{{user_password}}"
+}
+
+### /
+GET {{apiurl}}
+Authorization: Bearer {{jwt_token}}
