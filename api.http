@@ -1,7 +1,7 @@
 @apiurl=http://localhost:3000
-@user_email=gabriel.carmo@sellbie.com.br
-@user_password=C@rmo167
-@user_name=Gabriel Carmo
+@user_email=fulanodetal@mail.com
+@user_password=FulanoDeTal
+@user_name=Fulano de Tal
 @jwt_token={{loginRequest.response.body.access_token}}
 
 ### /user
